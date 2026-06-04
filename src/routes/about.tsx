@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Target, Eye, HeartHandshake, Users, TrendingUp, ShieldCheck } from "lucide-react";
+import { Heart, Eye, Users, Crown, Globe2, Sprout, ShieldCheck, TrendingUp } from "lucide-react";
 import { PageShell } from "@/components/site/PageShell";
 import { Section } from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
@@ -24,23 +24,27 @@ function AboutPage() {
     <PageShell>
       <Section>
         <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-          <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand">About us</span>
+          <span className="rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand">About Ujima</span>
           <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight md:text-5xl">
-            Building inclusive financial futures, one SACCO at a time.
+            Ethical microfinance, rooted in African soil.
           </h1>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Ujima is a digital-first lending platform built for SACCO members. We combine community trust
-            with modern technology to make credit faster, fairer, and more transparent.
+            Ujima SACCO is built on the <strong>ETHOS framework</strong>: Empathy, Transparency, Human Impact,
+            Ownership, and Sovereignty. We ensure 100% of your data remains under African governance,
+            compliant with the Kenya DPA 2022.
           </p>
         </motion.div>
       </Section>
 
       <Section className="pt-0">
-        <div className="grid gap-5 md:grid-cols-3">
+        <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">The ETHOS framework</h2>
+        <div className="mt-6 grid gap-5 md:grid-cols-3 lg:grid-cols-5">
           {[
-            { icon: Target, title: "Mission", desc: "To unlock economic opportunity for every SACCO member through accessible, fair digital credit." },
-            { icon: Eye, title: "Vision", desc: "A continent where every saver can access dignified, flexible financing in minutes." },
-            { icon: HeartHandshake, title: "Core Values", desc: "Community, Transparency, Discipline, Innovation, and Member-first service." },
+            { icon: Heart, title: "Empathy", desc: "Algorithms that respect seasonal income variance and rural realities." },
+            { icon: Eye, title: "Transparency", desc: "Clear terms, no hidden fees, open data practices." },
+            { icon: Users, title: "Human Impact", desc: "Loans measured by lives uplifted, not just margins." },
+            { icon: Crown, title: "Ownership", desc: "Member-owned, community-governed financial cooperative." },
+            { icon: Globe2, title: "Sovereignty", desc: "Your data stays in Africa, under Kenya DPA 2022." },
           ].map((c, i) => {
             const Icon = c.icon;
             return (
@@ -49,7 +53,7 @@ function AboutPage() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="hover-lift rounded-3xl border border-border bg-card p-6 shadow-card"
               >
                 <div className="grid h-11 w-11 place-items-center rounded-2xl bg-brand-soft text-brand">
@@ -65,11 +69,15 @@ function AboutPage() {
 
       <Section className="pt-0">
         <div className="rounded-3xl border border-border bg-surface p-8 md:p-12">
-          <h2 className="text-3xl font-semibold">Why choose Ujima</h2>
+          <h2 className="text-3xl font-semibold">Our promise to you</h2>
+          <p className="mt-3 max-w-2xl text-muted-foreground">
+            We do not use urban-centric AI models to judge rural market vendors. Ujima is harvest-aligned,
+            community-owned, and African by design.
+          </p>
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {[
-              { icon: Users, title: "Community-owned", desc: "Decisions guided by members, not shareholders." },
-              { icon: ShieldCheck, title: "Secure by design", desc: "End-to-end encryption and rigorous KYC." },
+              { icon: Sprout, title: "Harvest-aligned", desc: "Repay when your matooke or maize harvest brings income." },
+              { icon: ShieldCheck, title: "African data sovereignty", desc: "All data governed under Kenya DPA 2022." },
               { icon: TrendingUp, title: "Built to grow with you", desc: "From first loan to long-term wealth building." },
             ].map((c) => {
               const Icon = c.icon;
