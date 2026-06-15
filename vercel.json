@@ -1,7 +1,3 @@
-// Source - https://stackoverflow.com/a/79778809
-// Posted by Nsikan Sylvester
-// Retrieved 2026-06-15, License - CC BY-SA 4.0
-
 {
       "routes": [{ "src": "/", "dest": "/" },
                 { "src": "/sign-in", "dest": "/" },
